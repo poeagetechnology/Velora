@@ -10,7 +10,7 @@ const products = [
   {
     name: "Fresh Milk",
     qty: "1 Litre",
-    price: "₹50",
+    price: "₹55",
     category: "Milk",
     img: Milk,
     tag: "Bestseller",
@@ -32,7 +32,7 @@ const products = [
   {
     name: "Pure Ghee",
     qty: "250 ml",
-    price: "₹120",
+    price: "₹600",
     category: "Ghee",
     img: Ghee,
     tag: "Traditionally Made",
@@ -53,8 +53,8 @@ const products = [
   },
   {
     name: "Creamy Butter",
-    qty: "200 g",
-    price: "₹90",
+    qty: "500 ml",
+    price: "₹200",
     category: "Butter",
     img: Butter,
     tag: "Farm Fresh",
