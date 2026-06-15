@@ -5,7 +5,7 @@ import HeroImg from "../Asset/Logos.png";
 const trustBadges = [
   "100% Own Farm",
   "Milked at 4:30 AM",
-  "Delivered by 7 AM",
+  "Delivered by 6 AM",
   "Zero Additives",
   "Gobichettipalayam",
 ];
@@ -45,7 +45,7 @@ export default function Herosection() {
 
             <p className="mt-6 text-gray-500 text-lg max-w-md mx-auto md:mx-0 leading-relaxed">
               Pure, farm-fresh dairy from our own cows in Gobichettipalayam —
-              milked at 4:30 AM and at your doorstep by 7:00 AM.
+              milked at 4:30 AM and at your doorstep by 6:00 AM.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
@@ -114,7 +114,7 @@ export default function Herosection() {
                 </div>
                 <div>
                   <p className="text-xs text-gray-400 font-medium">Delivery By</p>
-                  <p className="text-sm font-bold text-gray-900">7:00 AM</p>
+                  <p className="text-sm font-bold text-gray-900">6:00 AM</p>
                 </div>
               </div>
             </div>

@@ -65,7 +65,7 @@ export default function Footer() {
           </Link>
           <p className="text-sm text-blue-300 leading-relaxed mb-4">
             100% own-farm dairy from Kallipatti, Gobichettipalayam —
-            milked at 4:30 AM and delivered fresh by 7:00 AM.
+            milked at 4:30 AM and delivered fresh by 6:00 AM.
           </p>
           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-900/50 border border-blue-800/50 rounded-full text-xs text-blue-400 font-medium">
             <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse" />

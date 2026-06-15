@@ -75,7 +75,7 @@ const processSteps = [
   { num: "02", title: "Morning Milking", desc: "Milking begins at 4:30 AM under hygienic, stress-free conditions by our trained team." },
   { num: "03", title: "Quality Testing", desc: "Each batch is tested on-site for fat percentage, purity, and freshness immediately after collection." },
   { num: "04", title: "Careful Packaging", desc: "Milk sealed in sterile, food-grade containers within minutes of testing. Zero exposure to open air." },
-  { num: "05", title: "Direct Delivery", desc: "Our own delivery team brings fresh milk to your doorstep by 7:00 AM. No middlemen." },
+  { num: "05", title: "Direct Delivery", desc: "Our own delivery team brings fresh milk to your doorstep by 6:00 AM. No middlemen." },
 ];
 
 const plans = [
@@ -87,7 +87,7 @@ const plans = [
     highlight: false,
     badge: null,
     waText: "Hello, I am interested in the Daily Fresh plan",
-    features: ["1 litre fresh milk daily", "Morning delivery by 7 AM", "Daily freshness guarantee", "WhatsApp support"],
+    features: ["1 litre fresh milk daily", "Morning delivery by 6 AM", "Daily freshness guarantee", "WhatsApp support"],
   },
   {
     name: "Family Pack",
@@ -131,7 +131,7 @@ const testimonials = [
 
 const faqs = [
   { q: "Do you source milk from outside farms or agents?", a: "No. Every single drop of milk comes from our own cows at our farm in Kallipatti, Gobichettipalayam. We have zero external suppliers — that's what Own Farm Production truly means." },
-  { q: "What time is milk delivered?", a: "We milk our cows at 4:30 AM and aim to deliver to all customers by 7:00 AM the same morning. You get milk that is literally hours old, not days." },
+  { q: "What time is milk delivered?", a: "We milk our cows at 4:30 AM and aim to deliver to all customers by 6:00 AM the same morning. You get milk that is literally hours old, not days." },
   { q: "How does the One Cow Program work?", a: "You get a dedicated cow assigned specifically to your family. You receive approximately 1 litre of milk daily from that single cow, along with weekly health updates, your cow's name and background, and the privilege to visit the farm." },
   { q: "Is the milk tested before delivery?", a: "Yes, every batch is tested for fat content and purity right after milking. We check each collection before packaging — no batch leaves our farm untested." },
   { q: "Which areas do you currently deliver to?", a: "We currently deliver across Gobichettipalayam and surrounding areas including Kallipatti. Contact us via WhatsApp or the contact form to confirm your exact address." },
