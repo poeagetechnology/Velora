@@ -14,7 +14,7 @@ function Icon({
   d,
   d2,
   size = "w-5 h-5",
-  color = "text-blue-700",
+  color = "text-green-700",
   weight = "1.7",
 }) {
   return (
@@ -209,54 +209,56 @@ const processSteps = [
   {
     num: "05",
     title: "Direct Delivery",
-    desc: "Our own delivery team brings fresh milk to your doorstep by 6:00 AM. No middlemen.",
+    desc: "Our own delivery team brings fresh milk to your doorstep between 5:00 AM – 7:00 AM (timing varies by distance). No middlemen.",
   },
 ];
 
 const plans = [
   {
-    name: "Daily Fresh",
-    price: "₹50",
-    per: "/day",
-    monthly: "~₹1,500 per month",
+    name: "Silver",
+    price: "₹1,799",
+    per: "/month",
+    monthly: "Doorstep delivery within 3 km radius",
     highlight: false,
-    badge: null,
-    waText: "Hello, I am interested in the Daily Fresh plan",
+    badge: "Silver",
+    waText: "Hello, I am interested in the Silver subscription plan",
     features: [
-      "1 litre fresh milk daily",
-      "Morning delivery by 6 AM",
-      "Daily freshness guarantee",
+      "Fresh cow milk delivered daily",
+      "Doorstep delivery up to 3 km from shop",
+      "Morning delivery (5:00 AM – 7:00 AM)",
       "WhatsApp support",
+      "Daily freshness guarantee",
     ],
   },
   {
-    name: "Family Pack",
-    price: "₹85",
-    per: "/day",
-    monthly: "~₹2,550 per month",
+    name: "Gold",
+    price: "₹1,999",
+    per: "/month",
+    monthly: "Doorstep delivery up to 6 km radius",
     highlight: true,
     badge: "Most Popular",
-    waText: "Hello, I am interested in the Family Pack plan",
+    waText: "Hello, I am interested in the Gold subscription plan",
     features: [
-      "2 litres fresh milk daily",
-      "Priority morning delivery",
+      "Fresh cow milk delivered daily",
+      "Doorstep delivery up to 6 km from shop",
+      "Priority morning delivery (5:00 AM – 7:00 AM)",
       "WhatsApp priority support",
       "Monthly farm updates",
     ],
   },
   {
-    name: "One Cow Premium",
+    name: "Premium",
     price: "₹2,499",
     per: "/month",
-    monthly: "~₹83 per day",
+    monthly: "Single-source pure cow milk in glass bottles",
     highlight: false,
-    badge: "Gold",
-    waText: "Hello, I am interested in the One Cow Program",
+    badge: "Premium",
+    waText: "Hello, I am interested in the Premium subscription plan",
     features: [
-      "Dedicated cow for your family",
-      "~1 litre daily, exclusive sourcing",
-      "Know your cow's name and history",
-      "Weekly cow health updates",
+      "Single-source pure cow milk only",
+      "Delivered in glass bottles",
+      "Doorstep delivery within 3 km radius",
+      "Morning delivery (5:00 AM – 7:00 AM)",
       "Farm visit privilege",
       "Exclusive sourcing certificate",
     ],
@@ -288,7 +290,7 @@ const faqs = [
   },
   {
     q: "What time is milk delivered?",
-    a: "We milk our cows at 4:30 AM and aim to deliver to all customers by 6:00 AM the same morning. You get milk that is literally hours old, not days.",
+    a: "We milk our cows at 4:30 AM and deliver between 5:00 AM – 7:00 AM the same morning. Exact timing varies based on your distance from the shop. You get milk that is literally hours old, not days.",
   },
   {
     q: "How does the One Cow Program work?",
@@ -319,16 +321,16 @@ export default function Home() {
       <WhyVelora />
 
       {/* Stats Bar */}
-      <div className="bg-blue-900 text-white py-10">
+      <div className="bg-green-900 text-white py-10">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-blue-800">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-green-800">
             {stats.map((s) => (
               <div
                 key={s.label}
                 className="py-6 md:py-0 md:px-8 text-center first:pt-0 last:pb-0 md:first:pl-0 md:last:pr-0"
               >
                 <p className="text-3xl font-bold tracking-tight">{s.value}</p>
-                <p className="text-blue-300 text-sm mt-1.5 font-medium">
+                <p className="text-green-300 text-sm mt-1.5 font-medium">
                   {s.label}
                 </p>
               </div>
@@ -342,7 +344,7 @@ export default function Home() {
       {/* Farm Story */}
       <section className="max-w-7xl mx-auto px-4 md:px-8 py-20 md:py-28">
         <div className="mb-14">
-          <span className="text-xs font-bold tracking-widest uppercase text-blue-700">
+          <span className="text-xs font-bold tracking-widest uppercase text-green-700">
             Our Farm
           </span>
           <h2 className="mt-3 text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
@@ -370,8 +372,8 @@ export default function Home() {
                 ourselves to.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-slate-900 to-blue-950 rounded-2xl p-6 text-white">
-              <p className="text-xs font-bold tracking-widest uppercase text-blue-400 mb-6">
+            <div className="bg-gradient-to-br from-slate-900 to-green-950 rounded-2xl p-6 text-white">
+              <p className="text-xs font-bold tracking-widest uppercase text-green-400 mb-6">
                 Farm Vitals
               </p>
               <div className="grid grid-cols-2 gap-4">
@@ -380,7 +382,7 @@ export default function Home() {
                     key={item.label}
                     className="pb-4 border-b border-white/10 last:border-b-0"
                   >
-                    <p className="text-blue-300 text-xs font-medium">
+                    <p className="text-green-300 text-xs font-medium">
                       {item.label}
                     </p>
                     <p className="text-2xl font-bold text-white mt-2">
@@ -389,7 +391,7 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <p className="text-xs text-blue-400 mt-6 pt-4 border-t border-white/10 leading-relaxed">
+              <p className="text-xs text-green-400 mt-6 pt-4 border-t border-white/10 leading-relaxed">
                 Kallipatti Farm, Gobichettipalayam, Tamil Nadu · Est. 2025
               </p>
             </div>
@@ -405,7 +407,7 @@ export default function Home() {
       <section className="bg-gray-50 py-20 md:py-24">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="max-w-2xl mb-14">
-            <span className="text-xs font-bold tracking-widest uppercase text-blue-700">
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700">
               Why Choose Us
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-gray-900">
@@ -420,14 +422,14 @@ export default function Home() {
             {whyFeatures.map((f) => (
               <div
                 key={f.title}
-                className="bg-white p-7 hover:bg-blue-50 transition-colors"
+                className="bg-white p-7 hover:bg-green-50 transition-colors"
               >
-                <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center mb-5">
+                <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center mb-5">
                   <Icon
                     d={f.icon}
                     d2={f.icon2}
                     size="w-5 h-5"
-                    color="text-blue-700"
+                    color="text-green-700"
                   />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2 text-sm">
@@ -442,29 +444,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* One Cow Program */}
+      {/* Premium Plan Showcase */}
       <section className="py-20 md:py-24">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="bg-gradient-to-br from-slate-900 to-blue-950 rounded-3xl overflow-hidden">
+          <div className="bg-gradient-to-br from-slate-900 to-green-950 rounded-3xl overflow-hidden">
             <div className="grid md:grid-cols-2">
               <div className="p-10 md:p-14 text-white">
                 <span className="inline-block px-3 py-1 bg-amber-400 text-amber-900 text-xs font-bold rounded-full uppercase tracking-wider mb-6">
-                  Premium Program
+                  Premium Subscription
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold mb-5 leading-tight">
-                  The One Cow Program
+                  Premium Plan — Pure Cow Milk in Glass
                 </h2>
                 <p className="text-slate-300 text-[15px] leading-relaxed mb-8">
-                  A first in Gobichettipalayam. Your family receives a dedicated
-                  cow — assigned only to you. Know her name, visit the farm, and
-                  receive milk sourced from your cow alone.
+                  Our highest tier. Single-source pure cow milk collected exclusively
+                  from our Kallipatti farm herd, bottled in reusable glass bottles
+                  and delivered to your doorstep — within a 3 km radius.
                 </p>
                 <ul className="space-y-3.5 mb-10">
                   {[
-                    "Dedicated cow assigned exclusively to your family",
-                    "Approximately 1 litre daily from your specific cow",
-                    "Know your cow's name and full health history",
-                    "Weekly photo and health updates via WhatsApp",
+                    "Single-source pure cow milk — no blending, no mixing",
+                    "Filled and delivered in reusable glass bottles",
+                    "Doorstep delivery restricted to 3 km from shop",
+                    "Morning delivery window: 5:00 AM – 7:00 AM",
                     "Open farm visit invitation — anytime",
                     "Exclusive sourcing certificate on enrollment",
                   ].map((item) => (
@@ -489,7 +491,7 @@ export default function Home() {
                   <span className="text-slate-400 text-base">/month</span>
                 </div>
                 <a
-                  href="https://wa.me/91XXXXXXXXXX?text=Hello%2C%20I%27m%20interested%20in%20the%20One%20Cow%20Program"
+                  href="https://wa.me/91XXXXXXXXXX?text=Hello%2C%20I%27m%20interested%20in%20the%20Premium%20subscription%20plan"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2.5 px-8 py-3.5 bg-amber-400 text-amber-900 text-sm font-bold rounded-xl hover:bg-amber-300 transition-all"
@@ -506,15 +508,15 @@ export default function Home() {
               </div>
 
               <div className="p-10 md:p-14 border-l border-white/5 flex flex-col justify-center">
-                <p className="text-xs font-bold tracking-widest uppercase text-blue-400 mb-8">
+                <p className="text-xs font-bold tracking-widest uppercase text-green-400 mb-8">
                   What You Receive
                 </p>
                 <div className="grid grid-cols-2 gap-5">
                   {[
-                    { val: "1", label: "Dedicated Cow", sub: "Yours alone" },
+                    { val: "100%", label: "Pure Cow Milk", sub: "Single source" },
                     { val: "365", label: "Days a Year", sub: "No holidays" },
-                    { val: "1 L", label: "Daily Milk", sub: "From your cow" },
-                    { val: "0", label: "Middlemen", sub: "Direct from farm" },
+                    { val: "Glass", label: "Bottles", sub: "Reusable & clean" },
+                    { val: "3 km", label: "Delivery Radius", sub: "Doorstep limit" },
                   ].map((item) => (
                     <div
                       key={item.label}
@@ -534,9 +536,7 @@ export default function Home() {
                 </div>
                 <div className="mt-8 p-5 bg-white/5 border border-white/8 rounded-2xl">
                   <p className="text-sm text-slate-300 leading-relaxed">
-                    With the One Cow Program, you're not just purchasing milk —
-                    you're building a direct relationship with the source of
-                    your family's nutrition. A Velora first.
+                    The Premium plan is Velora's most exclusive offering — unadulterated single-source cow milk in glass bottles, with a delivery window of 5:00 AM – 7:00 AM for customers within 3 km of our shop.
                   </p>
                 </div>
               </div>
@@ -549,7 +549,7 @@ export default function Home() {
       <section className="bg-gray-50 py-20 md:py-24">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="max-w-2xl mb-14">
-            <span className="text-xs font-bold tracking-widest uppercase text-blue-700">
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700">
               Nothing to Hide
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-gray-900">
@@ -564,10 +564,10 @@ export default function Home() {
             {transparencyItems.map((item) => (
               <div
                 key={item.title}
-                className="bg-white p-7 rounded-2xl border border-gray-100 hover:border-blue-100 hover:shadow-sm transition-all"
+                className="bg-white p-7 rounded-2xl border border-gray-100 hover:border-green-100 hover:shadow-sm transition-all"
               >
-                <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center mb-5">
-                  <Icon d={item.icon} size="w-5 h-5" color="text-blue-700" />
+                <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center mb-5">
+                  <Icon d={item.icon} size="w-5 h-5" color="text-green-700" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2 text-sm">
                   {item.title}
@@ -585,7 +585,7 @@ export default function Home() {
       <section className="py-20 md:py-24">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="max-w-2xl mb-16">
-            <span className="text-xs font-bold tracking-widest uppercase text-blue-700">
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700">
               How It Works
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-gray-900">
@@ -597,12 +597,12 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-5 gap-8 relative">
-            <div className="hidden md:block absolute top-[2.375rem] left-[10%] right-[10%] h-px bg-blue-100" />
+            <div className="hidden md:block absolute top-[2.375rem] left-[10%] right-[10%] h-px bg-green-100" />
             {processSteps.map((step, i) => (
               <div key={step.num} className="relative">
                 <div className="flex md:justify-center mb-5">
-                  <div className="w-[4.75rem] h-[4.75rem] bg-blue-900 text-white rounded-full flex flex-col items-center justify-center relative z-10 shadow-lg shadow-blue-900/20">
-                    <span className="text-xs text-blue-400 font-bold tracking-widest">
+                  <div className="w-[4.75rem] h-[4.75rem] bg-green-900 text-white rounded-full flex flex-col items-center justify-center relative z-10 shadow-lg shadow-green-900/20">
+                    <span className="text-xs text-green-400 font-bold tracking-widest">
                       {step.num}
                     </span>
                   </div>
@@ -623,7 +623,7 @@ export default function Home() {
       <section className="bg-gray-50 py-20 md:py-24">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="max-w-2xl mb-14">
-            <span className="text-xs font-bold tracking-widest uppercase text-blue-700">
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700">
               Plans & Pricing
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-gray-900">
@@ -640,39 +640,45 @@ export default function Home() {
                 key={plan.name}
                 className={`rounded-2xl p-8 relative flex flex-col ${
                   plan.highlight
-                    ? "bg-blue-900 text-white shadow-2xl shadow-blue-900/30 md:-mt-4"
-                    : plan.badge === "Gold"
+                    ? "bg-green-900 text-white shadow-2xl shadow-green-900/30 md:-mt-4"
+                    : plan.badge === "Premium"
                       ? "bg-white border-2 border-amber-200 shadow-md"
                       : "bg-white border border-gray-200 shadow-sm"
                 }`}
               >
                 {plan.badge && (
                   <span
-                    className={`absolute -top-3 left-8 px-4 py-1 text-xs font-bold rounded-full ${plan.badge === "Gold" ? "bg-amber-400 text-amber-900" : "bg-white text-blue-900 border border-gray-100 shadow-sm"}`}
+                    className={`absolute -top-3 left-8 px-4 py-1 text-xs font-bold rounded-full ${
+                      plan.badge === "Premium"
+                        ? "bg-amber-400 text-amber-900"
+                        : plan.badge === "Silver"
+                          ? "bg-gray-200 text-gray-700"
+                          : "bg-white text-green-900 border border-gray-100 shadow-sm"
+                    }`}
                   >
                     {plan.badge}
                   </span>
                 )}
                 <div className="mb-6">
                   <h3
-                    className={`text-base font-bold mb-0.5 ${plan.highlight ? "text-white" : plan.badge === "Gold" ? "text-amber-800" : "text-gray-900"}`}
+                    className={`text-base font-bold mb-0.5 ${plan.highlight ? "text-white" : plan.badge === "Premium" ? "text-amber-800" : "text-gray-900"}`}
                   >
                     {plan.name}
                   </h3>
                   <p
-                    className={`text-xs ${plan.highlight ? "text-blue-300" : "text-gray-400"}`}
+                    className={`text-xs ${plan.highlight ? "text-green-300" : "text-gray-400"}`}
                   >
                     {plan.monthly}
                   </p>
                 </div>
                 <div className="flex items-baseline gap-1 mb-7">
                   <span
-                    className={`text-4xl font-black tracking-tight ${plan.highlight ? "text-white" : plan.badge === "Gold" ? "text-amber-700" : "text-blue-900"}`}
+                    className={`text-4xl font-black tracking-tight ${plan.highlight ? "text-white" : plan.badge === "Premium" ? "text-amber-700" : "text-green-900"}`}
                   >
                     {plan.price}
                   </span>
                   <span
-                    className={`text-sm ${plan.highlight ? "text-blue-300" : "text-gray-400"}`}
+                    className={`text-sm ${plan.highlight ? "text-green-300" : "text-gray-400"}`}
                   >
                     {plan.per}
                   </span>
@@ -681,7 +687,7 @@ export default function Home() {
                   {plan.features.map((f) => (
                     <li
                       key={f}
-                      className={`flex items-start gap-2.5 text-sm ${plan.highlight ? "text-blue-100" : "text-gray-600"}`}
+                      className={`flex items-start gap-2.5 text-sm ${plan.highlight ? "text-green-100" : "text-gray-600"}`}
                     >
                       <div className="mt-0.5 flex-shrink-0">
                         <Icon
@@ -689,10 +695,10 @@ export default function Home() {
                           size="w-4 h-4"
                           color={
                             plan.highlight
-                              ? "text-blue-300"
-                              : plan.badge === "Gold"
+                              ? "text-green-300"
+                              : plan.badge === "Premium"
                                 ? "text-amber-500"
-                                : "text-blue-600"
+                                : "text-green-600"
                           }
                           weight="2.5"
                         />
@@ -707,10 +713,10 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className={`block w-full text-center py-3 rounded-xl text-sm font-bold transition-all ${
                     plan.highlight
-                      ? "bg-white text-blue-900 hover:bg-blue-50"
-                      : plan.badge === "Gold"
+                      ? "bg-white text-green-900 hover:bg-green-50"
+                      : plan.badge === "Premium"
                         ? "bg-amber-400 text-amber-900 hover:bg-amber-300"
-                        : "bg-blue-900 text-white hover:bg-blue-800"
+                        : "bg-green-900 text-white hover:bg-green-800"
                   }`}
                 >
                   Get Started
@@ -719,17 +725,109 @@ export default function Home() {
             ))}
           </div>
           <p className="mt-8 text-xs text-gray-400">
-            All plans include daily fresh delivery. Prices may vary. Contact us
-            to confirm availability in your area.
+            All subscription plans include daily doorstep delivery. Delivery timing: 5:00 AM – 7:00 AM (varies by distance from shop). Delivery radius applies per plan. Contact us to confirm coverage in your area.
           </p>
+
+          {/* Daily Fresh Milk — standalone retail option */}
+          <div className="mt-10 max-w-5xl">
+            <div className="bg-white border border-green-100 rounded-2xl p-6 md:p-8">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="flex-shrink-0 w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center">
+                  <Icon d={P.bolt} size="w-6 h-6" color="text-green-700" />
+                </div>
+                <div>
+                  <span className="inline-block px-2.5 py-0.5 bg-green-100 text-green-800 text-[10px] font-bold rounded-full uppercase tracking-wider mb-2">
+                    Daily Purchase · No Subscription Required
+                  </span>
+                  <h3 className="text-base font-bold text-gray-900 mb-1">
+                    Daily Fresh Milk — Retail Pricing
+                  </h3>
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    Prefer to buy as needed? Order fresh milk daily with no commitment — pick it up from our shop or have it delivered to your door.
+                  </p>
+                </div>
+              </div>
+
+              {/* Two pricing columns */}
+              <div className="grid sm:grid-cols-2 gap-4">
+                {/* Store Pickup */}
+                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5 flex flex-col gap-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-7 h-7 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Icon d={P.home} size="w-3.5 h-3.5" color="text-green-700" />
+                    </div>
+                    <span className="text-xs font-bold text-gray-700 uppercase tracking-wide">Store / Walk-in Pickup</span>
+                  </div>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-3xl font-black text-green-900">₹55</span>
+                    <span className="text-sm text-gray-400">/ litre</span>
+                  </div>
+                  <ul className="space-y-1.5">
+                    {["Collect directly at our shop", "No delivery charge", "Same-morning milk, tested daily"].map((f) => (
+                      <li key={f} className="flex items-center gap-2 text-xs text-gray-500">
+                        <Icon d={P.check} size="w-3.5 h-3.5" color="text-green-600" weight="2.5" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Doorstep Delivery */}
+                <div className="bg-green-50 border border-green-100 rounded-xl p-5 flex flex-col gap-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-7 h-7 bg-green-200 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Icon d={P.truck} size="w-3.5 h-3.5" color="text-green-800" />
+                    </div>
+                    <span className="text-xs font-bold text-green-800 uppercase tracking-wide">Doorstep Delivery</span>
+                  </div>
+                  <div>
+                    <div className="flex items-baseline gap-1">
+                      <span className="text-3xl font-black text-green-900">₹60</span>
+                      <span className="text-sm text-gray-500">/ litre</span>
+                    </div>
+                    <p className="text-[11px] text-green-700 font-semibold mt-0.5">
+                      + delivery charge per km from shop
+                    </p>
+                  </div>
+                  <ul className="space-y-1.5">
+                    {["Delivered to your door (5–7 AM)", "Per-km delivery fee added at checkout", "Use our Calculator to estimate cost"].map((f) => (
+                      <li key={f} className="flex items-center gap-2 text-xs text-gray-600">
+                        <Icon d={P.check} size="w-3.5 h-3.5" color="text-green-600" weight="2.5" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-5 flex flex-col sm:flex-row gap-3">
+                <a
+                  href="https://wa.me/91XXXXXXXXXX?text=Hello%2C%20I%20would%20like%20to%20order%20daily%20fresh%20milk%20for%20store%20pickup%20%E2%80%94%20%E2%82%B955%2Flitre"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 text-center py-2.5 bg-green-900 text-white text-xs font-bold rounded-xl hover:bg-green-800 transition-all"
+                >
+                  Order Store Pickup — ₹55/L
+                </a>
+                <a
+                  href="https://wa.me/91XXXXXXXXXX?text=Hello%2C%20I%20would%20like%20daily%20fresh%20milk%20delivered%20to%20my%20door%20%E2%80%94%20%E2%82%B960%2Flitre%20%2B%20delivery%20charge"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 text-center py-2.5 bg-white border border-green-200 text-green-900 text-xs font-bold rounded-xl hover:bg-green-50 transition-all"
+                >
+                  Order Doorstep Delivery — ₹60/L + km fee
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="bg-blue-900 py-20 text-white">
+      <section className="bg-green-900 py-20 text-white">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="max-w-2xl mb-14">
-            <span className="text-xs font-bold tracking-widest uppercase text-blue-400">
+            <span className="text-xs font-bold tracking-widest uppercase text-green-400">
               Happy Families
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold">
@@ -754,12 +852,12 @@ export default function Home() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-blue-100 text-sm leading-relaxed mb-6">
+                <p className="text-green-100 text-sm leading-relaxed mb-6">
                   "{t.text}"
                 </p>
                 <div className="border-t border-white/10 pt-5">
                   <p className="font-bold text-white text-sm">{t.name}</p>
-                  <p className="text-xs text-blue-400 mt-0.5">{t.location}</p>
+                  <p className="text-xs text-green-400 mt-0.5">{t.location}</p>
                 </div>
               </div>
             ))}
@@ -771,7 +869,7 @@ export default function Home() {
       <section className="py-20 md:py-24">
         <div className="max-w-3xl mx-auto px-4 md:px-8">
           <div className="mb-14">
-            <span className="text-xs font-bold tracking-widest uppercase text-blue-700">
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700">
               Questions & Answers
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-gray-900">
@@ -782,16 +880,16 @@ export default function Home() {
             {faqs.map((faq, i) => (
               <div key={i}>
                 <button
-                  className="w-full text-left py-5 flex items-center justify-between gap-6 hover:text-blue-900 transition-colors group"
+                  className="w-full text-left py-5 flex items-center justify-between gap-6 hover:text-green-900 transition-colors group"
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                 >
                   <span
-                    className={`font-semibold text-sm leading-snug ${openFaq === i ? "text-blue-900" : "text-gray-800"}`}
+                    className={`font-semibold text-sm leading-snug ${openFaq === i ? "text-green-900" : "text-gray-800"}`}
                   >
                     {faq.q}
                   </span>
                   <div
-                    className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all ${openFaq === i ? "bg-blue-900 text-white" : "bg-gray-100 text-gray-500 group-hover:bg-blue-50 group-hover:text-blue-700"}`}
+                    className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all ${openFaq === i ? "bg-green-900 text-white" : "bg-gray-100 text-gray-500 group-hover:bg-green-50 group-hover:text-green-700"}`}
                   >
                     <svg
                       className={`w-3.5 h-3.5 transition-transform duration-200 ${openFaq === i ? "rotate-180" : ""}`}
@@ -822,7 +920,7 @@ export default function Home() {
             <p className="text-sm text-gray-500">Still have questions?</p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-blue-800 hover:text-blue-600 transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-green-800 hover:text-green-600 transition-colors"
             >
               Contact us
               <Icon d={P.arrowR} size="w-4 h-4" color="text-current" />
@@ -834,24 +932,24 @@ export default function Home() {
       {/* CTA */}
       <section className="bg-gray-50 py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-blue-900 rounded-3xl p-10 md:p-16 text-center text-white">
+          <div className="bg-green-900 rounded-3xl p-10 md:p-16 text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight max-w-2xl mx-auto">
               Taste the Difference of Own-Farm Milk
             </h2>
-            <p className="text-blue-200 text-lg max-w-xl mx-auto mb-8">
+            <p className="text-green-200 text-lg max-w-xl mx-auto mb-8">
               From our cows in Kallipatti to your family's table — pure, honest
               dairy with nothing to hide.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/products"
-                className="px-8 py-3.5 bg-white text-blue-900 text-sm font-bold rounded-xl hover:bg-blue-50 transition-all"
+                className="px-8 py-3.5 bg-white text-green-900 text-sm font-bold rounded-xl hover:bg-green-50 transition-all"
               >
                 View Our Products
               </Link>
               <Link
                 to="/contact"
-                className="px-8 py-3.5 border border-blue-700 text-white text-sm font-semibold rounded-xl hover:bg-blue-800 transition-all"
+                className="px-8 py-3.5 border border-green-700 text-white text-sm font-semibold rounded-xl hover:bg-green-800 transition-all"
               >
                 Get in Touch
               </Link>

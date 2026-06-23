@@ -32,7 +32,7 @@ export default function Header() {
           <img src={Logo} alt="Velora Milk" className="w-10 h-10 object-contain" />
           <div className="flex flex-col leading-none">
             <span className="text-base font-bold text-gray-900 tracking-tight">Velora</span>
-            <span className="text-[10px] text-blue-700 font-medium tracking-widest uppercase">Milk</span>
+            <span className="text-[10px] text-green-700 font-medium tracking-widest uppercase">Milk</span>
           </div>
         </Link>
 
@@ -43,7 +43,7 @@ export default function Header() {
               to={link.to}
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                 location.pathname === link.to
-                  ? "text-blue-800 bg-blue-50"
+                  ? "text-green-800 bg-green-50"
                   : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
               }`}
             >
@@ -55,7 +55,7 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-3">
           <Link
             to="/contact"
-            className="px-4 py-2 text-sm font-semibold text-white bg-blue-800 rounded-lg hover:bg-blue-700 transition-colors shadow-md shadow-blue-900/20"
+            className="px-4 py-2 text-sm font-semibold text-white bg-green-800 rounded-lg hover:bg-green-700 transition-colors shadow-md shadow-green-900/20"
           >
             Get in Touch
           </Link>
@@ -80,7 +80,7 @@ export default function Header() {
                 onClick={() => setMenuOpen(false)}
                 className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
                   location.pathname === link.to
-                    ? "text-blue-800 bg-blue-50"
+                    ? "text-green-800 bg-green-50"
                     : "text-gray-700 hover:bg-gray-50"
                 }`}
               >
@@ -90,7 +90,7 @@ export default function Header() {
             <Link
               to="/contact"
               onClick={() => setMenuOpen(false)}
-              className="mt-3 px-4 py-3 text-center text-sm font-semibold text-white bg-blue-800 rounded-lg hover:bg-blue-700 transition"
+              className="mt-3 px-4 py-3 text-center text-sm font-semibold text-white bg-green-800 rounded-lg hover:bg-green-700 transition"
             >
               Get in Touch
             </Link>

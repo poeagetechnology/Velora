@@ -20,9 +20,9 @@ const FAQ_TIERS: FAQTier[] = [
     id: "why-velora",
     tier: "01",
     label: "Why Velora?",
-    dotClass: "bg-blue-600",
-    borderClass: "border-blue-100",
-    badgeClass: "bg-blue-50 text-blue-700",
+    dotClass: "bg-green-600",
+    borderClass: "border-green-100",
+    badgeClass: "bg-green-50 text-green-700",
     items: [
       {
         q: "What makes Velora fundamentally different from other dairy brands?",
@@ -30,7 +30,7 @@ const FAQ_TIERS: FAQTier[] = [
       },
       {
         q: "Is the milk genuinely fresh every single morning?",
-        a: "Without exception. Milking starts at 4:30 AM, on-site testing and packaging completes by 5:30 AM, and your delivery arrives by 6:00 AM. The milk you drink is under 3 hours old — not 2 days old like chilled packet milk, not 'this week' like most commercial options.",
+        a: "Without exception. Milking starts at 4:30 AM, on-site testing and packaging completes by 5:30 AM, and your delivery arrives between 5:00 AM – 7:00 AM (timing varies based on your distance from the shop). The milk you drink is under 3 hours old — not 2 days old like chilled packet milk, not 'this week' like most commercial options.",
       },
       {
         q: "Can I actually visit the farm and see where my milk comes from?",
@@ -74,7 +74,7 @@ const FAQ_TIERS: FAQTier[] = [
       },
       {
         q: "What if the local milkman misses a day or delivers at irregular times?",
-        a: "Local milkmen operate on informal personal arrangements with no contractual obligation and no accountability structure. Velora delivers 365 days a year at 6:00 AM sharp. If there is ever an issue, you have a direct WhatsApp support line to our team — not an individual's personal number that may or may not be answered.",
+        a: "Local milkmen operate on informal personal arrangements with no contractual obligation and no accountability structure. Velora delivers 365 days a year between 5:00 AM – 7:00 AM (exact time varies by your distance from the shop). If there is ever an issue, you have a direct WhatsApp support line to our team — not an individual's personal number that may or may not be answered.",
       },
       {
         q: "Is there any health monitoring on the cows at Velora?",
@@ -172,7 +172,7 @@ export default function WhyVeloraFAQ() {
     <section className="py-20 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="max-w-xl mb-14">
-          <span className="text-xs font-bold tracking-widest uppercase text-blue-700">
+          <span className="text-xs font-bold tracking-widest uppercase text-green-700">
             Your Questions Answered
           </span>
           <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900 leading-tight">

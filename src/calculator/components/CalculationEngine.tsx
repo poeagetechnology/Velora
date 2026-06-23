@@ -41,9 +41,9 @@ export function CalculationEngine({ onCalculate }: CalculationEngineProps) {
     <Card className="shadow-lg border-gray-200 dark:border-slate-700 hover:shadow-xl transition-shadow duration-300 h-full">
       <CardHeader className="pb-4">
         <div className="flex items-start gap-3">
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-900/10 p-2.5 rounded-lg">
+          <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-900/10 p-2.5 rounded-lg">
             <Calculator
-              className="size-5 text-blue-600 dark:text-blue-400"
+              className="size-5 text-green-600 dark:text-green-400"
               strokeWidth={2}
             />
           </div>
@@ -74,7 +74,7 @@ export function CalculationEngine({ onCalculate }: CalculationEngineProps) {
               value={distance}
               onChange={(e) => setDistance(e.target.value)}
               onKeyPress={handleKeyPress}
-              className="pr-12 h-11 text-base focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-800 dark:border-slate-600 dark:text-white transition-all"
+              className="pr-12 h-11 text-base focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-slate-800 dark:border-slate-600 dark:text-white transition-all"
               min="0"
               step="0.1"
             />
@@ -102,7 +102,7 @@ export function CalculationEngine({ onCalculate }: CalculationEngineProps) {
             value={deliveries}
             onChange={(e) => setDeliveries(e.target.value)}
             onKeyPress={handleKeyPress}
-            className="h-11 text-base focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-800 dark:border-slate-600 dark:text-white transition-all"
+            className="h-11 text-base focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-slate-800 dark:border-slate-600 dark:text-white transition-all"
             min="1"
             step="1"
           />
@@ -115,7 +115,7 @@ export function CalculationEngine({ onCalculate }: CalculationEngineProps) {
         <Button
           onClick={handleCalculate}
           disabled={isCalculating || !distance}
-          className="w-full h-11 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 dark:from-blue-600 dark:to-blue-700 dark:hover:from-blue-700 dark:hover:to-blue-800 text-white font-semibold shadow-lg shadow-blue-600/30 hover:shadow-blue-600/40 transition-all duration-300 text-base"
+          className="w-full h-11 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 dark:from-green-600 dark:to-green-700 dark:hover:from-green-700 dark:hover:to-green-800 text-white font-semibold shadow-lg shadow-green-600/30 hover:shadow-green-600/40 transition-all duration-300 text-base"
           size="lg"
         >
           <span className="flex items-center justify-center gap-2">

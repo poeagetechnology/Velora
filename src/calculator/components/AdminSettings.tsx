@@ -123,7 +123,7 @@ export function AdminSettings({ config, onSave }: AdminSettingsProps) {
 
   return (
     <Card className="shadow-lg border-gray-200 dark:border-slate-700 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-50/50 to-blue-50/50 dark:from-purple-900/10 dark:to-blue-900/10 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-50/50 to-green-50/50 dark:from-purple-900/10 dark:to-green-900/10 pointer-events-none" />
       <CardHeader className="pb-4 relative z-10">
         <div className="flex items-start gap-3">
           <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-900/10 p-2.5 rounded-lg">
@@ -174,7 +174,7 @@ export function AdminSettings({ config, onSave }: AdminSettingsProps) {
                   type="number"
                   value={baseRate}
                   onChange={(e) => setBaseRate(e.target.value)}
-                  className="pl-8 h-11 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-800 dark:border-slate-600 dark:text-white transition-all"
+                  className="pl-8 h-11 focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-slate-800 dark:border-slate-600 dark:text-white transition-all"
                   min="0"
                   step="0.1"
                 />
@@ -204,7 +204,7 @@ export function AdminSettings({ config, onSave }: AdminSettingsProps) {
                   type="number"
                   value={longDistanceRate}
                   onChange={(e) => setLongDistanceRate(e.target.value)}
-                  className="pl-8 h-11 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-800 dark:border-slate-600 dark:text-white transition-all"
+                  className="pl-8 h-11 focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-slate-800 dark:border-slate-600 dark:text-white transition-all"
                   min="0"
                   step="0.1"
                 />
@@ -332,13 +332,13 @@ export function AdminSettings({ config, onSave }: AdminSettingsProps) {
           </div>
 
           {/* Add New Tier Section */}
-          <div className="bg-blue-50 dark:bg-blue-900/10 p-4 rounded-lg border border-blue-200 dark:border-blue-700/30 space-y-3">
-            <h5 className="text-sm font-semibold text-blue-900 dark:text-blue-300">
+          <div className="bg-green-50 dark:bg-green-900/10 p-4 rounded-lg border border-green-200 dark:border-green-700/30 space-y-3">
+            <h5 className="text-sm font-semibold text-green-900 dark:text-green-300">
               Add New Discount Tier
             </h5>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               <div className="space-y-1.5">
-                <Label className="text-xs font-medium text-blue-800 dark:text-blue-300">
+                <Label className="text-xs font-medium text-green-800 dark:text-green-300">
                   Min Deliveries
                 </Label>
                 <Input
@@ -351,7 +351,7 @@ export function AdminSettings({ config, onSave }: AdminSettingsProps) {
                 />
               </div>
               <div className="space-y-1.5">
-                <Label className="text-xs font-medium text-blue-800 dark:text-blue-300">
+                <Label className="text-xs font-medium text-green-800 dark:text-green-300">
                   Discount %
                 </Label>
                 <Input
@@ -367,7 +367,7 @@ export function AdminSettings({ config, onSave }: AdminSettingsProps) {
               <div className="flex items-end">
                 <Button
                   onClick={handleAddTier}
-                  className="w-full h-10 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold text-sm"
+                  className="w-full h-10 bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-700 hover:to-cyan-700 text-white font-semibold text-sm"
                 >
                   <Plus className="size-4 mr-1.5" />
                   Add Tier
@@ -388,7 +388,7 @@ export function AdminSettings({ config, onSave }: AdminSettingsProps) {
         <Button
           onClick={handleSave}
           disabled={isSaving}
-          className="w-full h-11 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 dark:from-purple-600 dark:to-blue-600 dark:hover:from-purple-700 dark:hover:to-blue-700 text-white font-semibold shadow-lg shadow-purple-600/30 hover:shadow-purple-600/40 transition-all duration-300 text-base"
+          className="w-full h-11 bg-gradient-to-r from-purple-600 to-green-600 hover:from-purple-700 hover:to-green-700 dark:from-purple-600 dark:to-green-600 dark:hover:from-purple-700 dark:hover:to-green-700 text-white font-semibold shadow-lg shadow-purple-600/30 hover:shadow-purple-600/40 transition-all duration-300 text-base"
         >
           <span className="flex items-center justify-center gap-2">
             {isSaving ? (

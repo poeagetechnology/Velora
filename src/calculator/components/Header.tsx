@@ -13,7 +13,7 @@ export function Header({ pricingProfile }: HeaderProps) {
         <div className="h-16 flex items-center justify-between">
           {/* Logo and Brand */}
           <div className="flex items-center gap-3 flex-1">
-            <div className="bg-gradient-to-br from-blue-600 to-blue-700 p-2.5 rounded-xl shadow-lg shadow-blue-600/30 flex items-center justify-center">
+            <div className="bg-gradient-to-br from-green-600 to-green-700 p-2.5 rounded-xl shadow-lg shadow-green-600/30 flex items-center justify-center">
               <Milk className="size-6 text-white" strokeWidth={2.5} />
             </div>
             <div className="flex items-center gap-3 flex-wrap">
@@ -36,7 +36,7 @@ export function Header({ pricingProfile }: HeaderProps) {
               </span>
               <Badge
                 variant="outline"
-                className="border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 font-semibold text-xs"
+                className="border-green-600 text-green-600 dark:border-green-400 dark:text-green-400 font-semibold text-xs"
               >
                 {pricingProfile}
               </Badge>

@@ -24,9 +24,9 @@ export function ResultsPanel({ result }: ResultsPanelProps) {
       <Card className="shadow-lg border-gray-200 dark:border-slate-700 h-full sticky top-[5rem] lg:top-24">
         <CardHeader className="pb-4">
           <div className="flex items-start gap-3">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-900/10 p-2.5 rounded-lg">
+            <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-900/10 p-2.5 rounded-lg">
               <TrendingUp
-                className="size-5 text-blue-600 dark:text-blue-400"
+                className="size-5 text-green-600 dark:text-green-400"
                 strokeWidth={2}
               />
             </div>
@@ -61,12 +61,12 @@ export function ResultsPanel({ result }: ResultsPanelProps) {
 
   return (
     <Card className="shadow-lg border-gray-200 dark:border-slate-700 sticky top-[5rem] lg:top-24 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50 dark:from-blue-900/10 dark:to-purple-900/10 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-green-50/50 to-purple-50/50 dark:from-green-900/10 dark:to-purple-900/10 pointer-events-none" />
       <CardHeader className="pb-4 relative z-10">
         <div className="flex items-start gap-3">
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-900/10 p-2.5 rounded-lg">
+          <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-900/10 p-2.5 rounded-lg">
             <TrendingUp
-              className="size-5 text-blue-600 dark:text-blue-400"
+              className="size-5 text-green-600 dark:text-green-400"
               strokeWidth={2}
             />
           </div>
@@ -79,15 +79,15 @@ export function ResultsPanel({ result }: ResultsPanelProps) {
       </CardHeader>
       <CardContent className="space-y-6 relative z-10">
         {/* Final Total with Animation */}
-        <div className="bg-gradient-to-br from-blue-600 to-blue-700 dark:from-blue-600 dark:to-blue-700 p-6 rounded-xl shadow-lg shadow-blue-600/30 transform transition-transform hover:scale-105 duration-300">
-          <p className="text-blue-100 text-xs font-semibold uppercase tracking-wider">
+        <div className="bg-gradient-to-br from-green-600 to-green-700 dark:from-green-600 dark:to-green-700 p-6 rounded-xl shadow-lg shadow-green-600/30 transform transition-transform hover:scale-105 duration-300">
+          <p className="text-green-100 text-xs font-semibold uppercase tracking-wider">
             Final Total Charge
           </p>
           <div className="mt-2 flex items-baseline gap-2">
             <span className="text-5xl font-black text-white">
               ₹{result.totalCharge.toFixed(2)}
             </span>
-            <span className="text-blue-100 text-sm font-medium">Total</span>
+            <span className="text-green-100 text-sm font-medium">Total</span>
           </div>
         </div>
 
@@ -103,12 +103,12 @@ export function ResultsPanel({ result }: ResultsPanelProps) {
 
           <div className="space-y-3.5">
             {/* Base Charge */}
-            <div className="bg-gray-50 dark:bg-slate-800/50 p-3.5 rounded-lg border border-gray-200 dark:border-slate-700/50 hover:border-blue-300 dark:hover:border-blue-700/50 transition-colors">
+            <div className="bg-gray-50 dark:bg-slate-800/50 p-3.5 rounded-lg border border-gray-200 dark:border-slate-700/50 hover:border-green-300 dark:hover:border-green-700/50 transition-colors">
               <div className="flex justify-between items-center mb-1.5">
                 <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">
                   Base Distance Charge
                 </span>
-                <span className="text-base font-bold text-blue-600 dark:text-blue-400">
+                <span className="text-base font-bold text-green-600 dark:text-green-400">
                   ₹{result.baseCharge.toFixed(2)}
                 </span>
               </div>

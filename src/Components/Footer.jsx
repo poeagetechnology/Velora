@@ -50,7 +50,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-950 text-blue-200">
+    <footer className="bg-green-950 text-green-200">
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 pt-14 pb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
 
@@ -60,15 +60,15 @@ export default function Footer() {
             <img src={Logo} alt="Velora Milk" className="w-10 h-10 object-contain" />
             <div className="flex flex-col leading-none">
               <span className="text-base font-bold text-white">Velora</span>
-              <span className="text-[10px] text-blue-400 font-medium tracking-widest uppercase">Milk</span>
+              <span className="text-[10px] text-green-400 font-medium tracking-widest uppercase">Milk</span>
             </div>
           </Link>
-          <p className="text-sm text-blue-300 leading-relaxed mb-4">
+          <p className="text-sm text-green-300 leading-relaxed mb-4">
             100% own-farm dairy from Kallipatti, Gobichettipalayam —
-            milked at 4:30 AM and delivered fresh by 6:00 AM.
+            milked at 4:30 AM and delivered fresh between 5:00 AM – 7:00 AM.
           </p>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-900/50 border border-blue-800/50 rounded-full text-xs text-blue-400 font-medium">
-            <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse" />
+          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-green-900/50 border border-green-800/50 rounded-full text-xs text-green-400 font-medium">
+            <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
             Serving Gobichettipalayam since 2025
           </span>
           <div className="flex items-center gap-3 mt-5">
@@ -79,7 +79,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                className="w-8 h-8 bg-blue-900/60 hover:bg-blue-800 border border-blue-800/60 rounded-lg flex items-center justify-center text-blue-300 hover:text-white transition-colors"
+                className="w-8 h-8 bg-green-900/60 hover:bg-green-800 border border-green-800/60 rounded-lg flex items-center justify-center text-green-300 hover:text-white transition-colors"
               >
                 {s.icon}
               </a>
@@ -89,11 +89,11 @@ export default function Footer() {
 
         {/* Pages */}
         <div>
-          <h4 className="text-xs font-bold tracking-widest uppercase text-blue-400 mb-4">Pages</h4>
+          <h4 className="text-xs font-bold tracking-widest uppercase text-green-400 mb-4">Pages</h4>
           <ul className="space-y-2.5">
             {navLinks.map((item) => (
               <li key={item.label}>
-                <Link to={item.to} className="text-sm text-blue-300 hover:text-white transition-colors">
+                <Link to={item.to} className="text-sm text-green-300 hover:text-white transition-colors">
                   {item.label}
                 </Link>
               </li>
@@ -103,27 +103,27 @@ export default function Footer() {
 
         {/* Products */}
         <div>
-          <h4 className="text-xs font-bold tracking-widest uppercase text-blue-400 mb-4">Our Products</h4>
+          <h4 className="text-xs font-bold tracking-widest uppercase text-green-400 mb-4">Our Products</h4>
           <ul className="space-y-2.5">
             {productLinks.map((label) => (
-              <li key={label} className="text-sm text-blue-400">{label}</li>
+              <li key={label} className="text-sm text-green-400">{label}</li>
             ))}
           </ul>
         </div>
 
         {/* Contact */}
         <div>
-          <h4 className="text-xs font-bold tracking-widest uppercase text-blue-400 mb-4">Contact</h4>
+          <h4 className="text-xs font-bold tracking-widest uppercase text-green-400 mb-4">Contact</h4>
           <ul className="space-y-3">
-            <li className="flex items-start gap-2.5 text-sm text-blue-300">
-              <svg className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+            <li className="flex items-start gap-2.5 text-sm text-green-300">
+              <svg className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
               </svg>
               Kallipatti, Gobichettipalayam, Tamil Nadu
             </li>
-            <li className="flex items-start gap-2.5 text-sm text-blue-300">
-              <svg className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+            <li className="flex items-start gap-2.5 text-sm text-green-300">
+              <svg className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
               </svg>
               hello@veloramil.com
@@ -146,8 +146,8 @@ export default function Footer() {
 
       </div>
 
-      <div className="border-t border-blue-900 py-5">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-blue-500">
+      <div className="border-t border-green-900 py-5">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-green-500">
           <p>© 2025 Velora Milk. All rights reserved.</p>
           <p className="text-xs">Gobichettipalayam, Tamil Nadu, India</p>
         </div>

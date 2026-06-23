@@ -54,30 +54,30 @@ export default function AdminDashboard() {
     <div className="min-h-screen bg-gray-50">
 
       {/* Admin Header */}
-      <header className="bg-blue-900 text-white shadow-lg">
+      <header className="bg-green-900 text-white shadow-lg">
         <div className="max-w-7xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Link to="/" className="flex items-center gap-2.5">
               <img src={Logo} alt="Velora Milk" className="w-8 h-8 object-contain" />
               <span className="font-bold text-white hidden sm:block">Velora Milk</span>
             </Link>
-            <span className="text-blue-400 text-sm hidden sm:block">·</span>
-            <div className="flex items-center gap-1.5 bg-blue-800 px-3 py-1 rounded-lg">
-              <svg className="w-3.5 h-3.5 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+            <span className="text-green-400 text-sm hidden sm:block">·</span>
+            <div className="flex items-center gap-1.5 bg-green-800 px-3 py-1 rounded-lg">
+              <svg className="w-3.5 h-3.5 text-green-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
               </svg>
-              <span className="text-xs font-semibold text-blue-200">Admin Panel</span>
+              <span className="text-xs font-semibold text-green-200">Admin Panel</span>
             </div>
           </div>
 
           <div className="flex items-center gap-3">
-            <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-blue-800 rounded-lg">
-              <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
+            <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-green-800 rounded-lg">
+              <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center">
                 <span className="text-xs font-bold text-white uppercase">{adminUser[0]}</span>
               </div>
-              <span className="text-sm text-blue-200 font-medium">{adminUser}</span>
+              <span className="text-sm text-green-200 font-medium">{adminUser}</span>
             </div>
-            <Link to="/calculator" className="px-3 py-1.5 border border-blue-700 text-blue-200 text-xs font-semibold rounded-lg hover:bg-blue-800 transition-colors">
+            <Link to="/calculator" className="px-3 py-1.5 border border-green-700 text-green-200 text-xs font-semibold rounded-lg hover:bg-green-800 transition-colors">
               View Calculator
             </Link>
             <button onClick={handleLogout} className="flex items-center gap-1.5 px-3 py-1.5 bg-red-600/80 hover:bg-red-600 text-white text-xs font-semibold rounded-lg transition-colors">
@@ -100,8 +100,8 @@ export default function AdminDashboard() {
 
         {/* Save success toast */}
         {saved && (
-          <div className="mb-6 flex items-center gap-3 p-4 bg-blue-50 border border-blue-200 rounded-xl text-sm text-blue-800 font-semibold">
-            <svg className="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+          <div className="mb-6 flex items-center gap-3 p-4 bg-green-50 border border-green-200 rounded-xl text-sm text-green-800 font-semibold">
+            <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
             Configuration saved! The calculator will use the updated pricing.
@@ -112,17 +112,17 @@ export default function AdminDashboard() {
         <div className="grid sm:grid-cols-3 gap-5 mb-8">
           <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
             <p className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-2">Base Rate</p>
-            <p className="text-3xl font-black text-blue-900">₹{config.baseRate}<span className="text-sm font-semibold text-gray-400">/km</span></p>
+            <p className="text-3xl font-black text-green-900">₹{config.baseRate}<span className="text-sm font-semibold text-gray-400">/km</span></p>
             <p className="text-xs text-gray-400 mt-1">Applied for first 2 km</p>
           </div>
           <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
             <p className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-2">Long Distance Rate</p>
-            <p className="text-3xl font-black text-blue-900">₹{config.longDistanceRate}<span className="text-sm font-semibold text-gray-400">/km</span></p>
+            <p className="text-3xl font-black text-green-900">₹{config.longDistanceRate}<span className="text-sm font-semibold text-gray-400">/km</span></p>
             <p className="text-xs text-gray-400 mt-1">Applied beyond 2 km</p>
           </div>
           <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
             <p className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-2">Discount Tiers</p>
-            <p className="text-3xl font-black text-blue-900">{config.discountTiers.length}<span className="text-sm font-semibold text-gray-400"> tiers</span></p>
+            <p className="text-3xl font-black text-green-900">{config.discountTiers.length}<span className="text-sm font-semibold text-gray-400"> tiers</span></p>
             <p className="text-xs text-gray-400 mt-1">
               {config.discountTiers.length > 0
                 ? `Up to ${Math.max(...config.discountTiers.map((t) => t.discount))}% discount`
@@ -138,7 +138,7 @@ export default function AdminDashboard() {
               <h2 className="font-bold text-gray-900">Pricing Configuration</h2>
               <p className="text-xs text-gray-500 mt-0.5">Changes are applied immediately to the public calculator</p>
             </div>
-            <span className="flex items-center gap-1.5 px-3 py-1 bg-blue-50 border border-blue-100 rounded-lg text-xs font-semibold text-blue-700">
+            <span className="flex items-center gap-1.5 px-3 py-1 bg-green-50 border border-green-100 rounded-lg text-xs font-semibold text-green-700">
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
               </svg>

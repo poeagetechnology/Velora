@@ -50,7 +50,7 @@ export default function AdminLogin() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-green-950 via-green-900 to-green-800 flex items-center justify-center px-4 py-12">
 
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -60,19 +60,19 @@ export default function AdminLogin() {
 
       <div className="relative w-full max-w-md">
         {/* Card */}
-        <div className="bg-white rounded-3xl shadow-2xl shadow-blue-950/50 overflow-hidden">
+        <div className="bg-white rounded-3xl shadow-2xl shadow-green-950/50 overflow-hidden">
 
           {/* Top bar */}
-          <div className="bg-gradient-to-r from-blue-900 to-blue-800 px-8 pt-8 pb-6">
+          <div className="bg-gradient-to-r from-green-900 to-green-800 px-8 pt-8 pb-6">
             <Link to="/" className="flex items-center gap-2.5 mb-6">
               <img src={Logo} alt="Velora Milk" className="w-10 h-10 object-contain" />
               <div className="flex flex-col leading-none">
                 <span className="text-base font-bold text-white">Velora</span>
-                <span className="text-[10px] text-blue-300 font-medium tracking-widest uppercase">Milk</span>
+                <span className="text-[10px] text-green-300 font-medium tracking-widest uppercase">Milk</span>
               </div>
             </Link>
             <h1 className="text-2xl font-bold text-white">Admin Portal</h1>
-            <p className="text-blue-300 text-sm mt-1">Manage pricing and delivery settings</p>
+            <p className="text-green-300 text-sm mt-1">Manage pricing and delivery settings</p>
           </div>
 
           {/* Tabs */}
@@ -82,7 +82,7 @@ export default function AdminLogin() {
                 key={t}
                 onClick={() => { setTab(t); setError(""); setSuccess(""); }}
                 className={`flex-1 py-3.5 text-sm font-semibold capitalize transition-colors ${
-                  tab === t ? "text-blue-800 border-b-2 border-blue-800 bg-blue-50/50" : "text-gray-500 hover:text-gray-700"
+                  tab === t ? "text-green-800 border-b-2 border-green-800 bg-green-50/50" : "text-gray-500 hover:text-gray-700"
                 }`}
               >
                 {t === "login" ? "Sign In" : "Create Account"}
@@ -92,8 +92,8 @@ export default function AdminLogin() {
 
           <div className="px-8 py-8">
             {success && (
-              <div className="flex items-center gap-2 p-3.5 bg-blue-50 border border-blue-100 rounded-xl mb-5 text-sm text-blue-800">
-                <svg className="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+              <div className="flex items-center gap-2 p-3.5 bg-green-50 border border-green-100 rounded-xl mb-5 text-sm text-green-800">
+                <svg className="w-4 h-4 text-green-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
                 {success}
@@ -119,7 +119,7 @@ export default function AdminLogin() {
                       </svg>
                     </div>
                     <input type="text" name="username" value={form.username} onChange={handleChange} placeholder="admin" required
-                      className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition" />
+                      className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition" />
                   </div>
                 </div>
                 <div>
@@ -131,7 +131,7 @@ export default function AdminLogin() {
                       </svg>
                     </div>
                     <input type={showPassword ? "text" : "password"} name="password" value={form.password} onChange={handleChange} placeholder="••••••••" required
-                      className="w-full pl-10 pr-11 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition" />
+                      className="w-full pl-10 pr-11 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition" />
                     <button type="button" onClick={() => setShowPassword((v) => !v)} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                         {showPassword
@@ -142,13 +142,13 @@ export default function AdminLogin() {
                     </button>
                   </div>
                 </div>
-                <button type="submit" className="w-full py-3.5 bg-blue-800 text-white text-sm font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-900/20">
+                <button type="submit" className="w-full py-3.5 bg-green-800 text-white text-sm font-bold rounded-xl hover:bg-green-700 transition-all shadow-lg shadow-green-900/20">
                   Sign In to Admin Panel
                 </button>
                 {!adminExists && (
                   <p className="text-center text-xs text-gray-400">
                     No account yet?{" "}
-                    <button type="button" onClick={() => setTab("signup")} className="text-blue-700 font-semibold hover:underline">
+                    <button type="button" onClick={() => setTab("signup")} className="text-green-700 font-semibold hover:underline">
                       Create one
                     </button>
                   </p>
@@ -170,7 +170,7 @@ export default function AdminLogin() {
                       </svg>
                     </div>
                     <input type="text" name="username" value={form.username} onChange={handleChange} placeholder="e.g. velora_admin" required disabled={adminExists}
-                      className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition disabled:opacity-50 disabled:bg-gray-50" />
+                      className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition disabled:opacity-50 disabled:bg-gray-50" />
                   </div>
                 </div>
                 <div>
@@ -182,7 +182,7 @@ export default function AdminLogin() {
                       </svg>
                     </div>
                     <input type={showPassword ? "text" : "password"} name="password" value={form.password} onChange={handleChange} placeholder="Min 6 characters" required disabled={adminExists}
-                      className="w-full pl-10 pr-11 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition disabled:opacity-50 disabled:bg-gray-50" />
+                      className="w-full pl-10 pr-11 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition disabled:opacity-50 disabled:bg-gray-50" />
                     <button type="button" onClick={() => setShowPassword((v) => !v)} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
@@ -200,15 +200,15 @@ export default function AdminLogin() {
                       </svg>
                     </div>
                     <input type={showPassword ? "text" : "password"} name="confirmPassword" value={form.confirmPassword} onChange={handleChange} placeholder="Repeat password" required disabled={adminExists}
-                      className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition disabled:opacity-50 disabled:bg-gray-50" />
+                      className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition disabled:opacity-50 disabled:bg-gray-50" />
                   </div>
                 </div>
-                <button type="submit" disabled={adminExists} className="w-full py-3.5 bg-blue-800 text-white text-sm font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-900/20 disabled:opacity-50 disabled:cursor-not-allowed">
+                <button type="submit" disabled={adminExists} className="w-full py-3.5 bg-green-800 text-white text-sm font-bold rounded-xl hover:bg-green-700 transition-all shadow-lg shadow-green-900/20 disabled:opacity-50 disabled:cursor-not-allowed">
                   Create Admin Account
                 </button>
                 <p className="text-center text-xs text-gray-400">
                   Already have an account?{" "}
-                  <button type="button" onClick={() => setTab("login")} className="text-blue-700 font-semibold hover:underline">Sign in</button>
+                  <button type="button" onClick={() => setTab("login")} className="text-green-700 font-semibold hover:underline">Sign in</button>
                 </p>
               </form>
             )}
@@ -216,7 +216,7 @@ export default function AdminLogin() {
         </div>
 
         <div className="mt-6 text-center">
-          <Link to="/" className="text-blue-200 text-sm hover:text-white transition-colors">← Back to Velora Milk</Link>
+          <Link to="/" className="text-green-200 text-sm hover:text-white transition-colors">← Back to Velora Milk</Link>
         </div>
       </div>
     </div>

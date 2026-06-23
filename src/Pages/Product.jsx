@@ -11,10 +11,11 @@ const products = [
     name: "Fresh Milk",
     qty: "1 Litre",
     price: "₹55",
+    deliveryPrice: "₹60",
     category: "Milk",
     img: Milk,
     tag: "Bestseller",
-    tagColor: "bg-blue-100 text-blue-800",
+    tagColor: "bg-green-100 text-green-800",
     desc: "Pure whole milk collected fresh every morning from our Kallipatti farm. Rich in calcium, protein, and essential vitamins — zero additives.",
     highlights: ["No additives", "Collected daily", "Rich in calcium"],
   },
@@ -25,7 +26,7 @@ const products = [
     category: "Curd",
     img: Curd,
     tag: "Rich in Probiotics",
-    tagColor: "bg-sky-100 text-sky-800",
+    tagColor: "bg-green-100 text-green-800",
     desc: "Thick, creamy curd set naturally overnight using our fresh whole milk. Packed with probiotics that support healthy digestion.",
     highlights: ["Probiotic-rich", "Naturally set", "Gut-friendly"],
   },
@@ -74,11 +75,11 @@ export default function Product() {
     <main className="bg-white min-h-screen">
 
       {/* Page Hero */}
-      <div className="bg-gradient-to-br from-blue-900 to-blue-800 text-white">
+      <div className="bg-gradient-to-br from-green-900 to-green-800 text-white">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-20">
-          <span className="text-xs font-bold tracking-widest uppercase text-blue-300">Our Range</span>
+          <span className="text-xs font-bold tracking-widest uppercase text-green-300">Our Range</span>
           <h1 className="mt-2 text-4xl md:text-5xl font-bold tracking-tight">Pure Dairy Products</h1>
-          <p className="mt-4 text-blue-200 text-lg max-w-2xl leading-relaxed">
+          <p className="mt-4 text-green-200 text-lg max-w-2xl leading-relaxed">
             Every product comes from our own farm in Kallipatti, Gobichettipalayam —
             minimal processing, no middlemen, and freshness you can taste.
           </p>
@@ -95,7 +96,7 @@ export default function Product() {
               onClick={() => setActive(cat)}
               className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
                 active === cat
-                  ? "bg-blue-800 text-white shadow-md shadow-blue-900/20"
+                  ? "bg-green-800 text-white shadow-md shadow-green-900/20"
                   : "bg-gray-100 text-gray-600 hover:bg-gray-200"
               }`}
             >
@@ -109,7 +110,7 @@ export default function Product() {
           {filtered.map((item) => (
             <div key={item.name} className="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col">
 
-              <div className="bg-gradient-to-br from-slate-50 to-blue-50 px-8 pt-8 pb-4 flex items-center justify-center h-52">
+              <div className="bg-gradient-to-br from-slate-50 to-green-50 px-8 pt-8 pb-4 flex items-center justify-center h-52">
                 <img
                   src={item.img}
                   alt={item.name}
@@ -131,16 +132,30 @@ export default function Product() {
                 <p className="text-sm text-gray-500 leading-relaxed mt-2 mb-3">{item.desc}</p>
 
                 {/* Price */}
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-2xl font-bold text-blue-800">{item.price}</span>
-                  <span className="text-xs text-gray-400">per {item.qty}</span>
-                </div>
+                {item.deliveryPrice ? (
+                  <div className="mb-4 space-y-1.5">
+                    <div className="flex items-center gap-2">
+                      <span className="text-2xl font-bold text-green-800">{item.price}</span>
+                      <span className="text-xs text-gray-400">store pickup / {item.qty}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-base font-semibold text-green-600">{item.deliveryPrice}</span>
+                      <span className="text-xs text-gray-400">doorstep / {item.qty}</span>
+                      <span className="text-[10px] font-semibold text-green-700 bg-green-50 border border-green-100 px-2 py-0.5 rounded-full">+ km fee</span>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="text-2xl font-bold text-green-800">{item.price}</span>
+                    <span className="text-xs text-gray-400">per {item.qty}</span>
+                  </div>
+                )}
 
                 {/* Highlights */}
                 <div className="flex flex-wrap gap-2 mt-auto">
                   {item.highlights.map((h) => (
                     <span key={h} className="inline-flex items-center gap-1 text-xs text-gray-600 bg-gray-50 border border-gray-100 px-2.5 py-1 rounded-full">
-                      <svg className="w-3 h-3 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                      <svg className="w-3 h-3 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
                       {h}
@@ -153,12 +168,12 @@ export default function Product() {
         </div>
 
         {/* Enquiry Banner */}
-        <div className="mt-16 bg-blue-50 border border-blue-100 rounded-2xl p-8 md:p-12 text-center">
+        <div className="mt-16 bg-green-50 border border-green-100 rounded-2xl p-8 md:p-12 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-3">Want to know more about our products?</h3>
           <p className="text-gray-500 max-w-xl mx-auto mb-6">
             Have a question about ingredients, availability, or delivery? Our team is happy to help.
           </p>
-          <Link to="/contact" className="inline-block px-8 py-3.5 bg-blue-800 text-white text-sm font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-900/20">
+          <Link to="/contact" className="inline-block px-8 py-3.5 bg-green-800 text-white text-sm font-bold rounded-xl hover:bg-green-700 transition-all shadow-lg shadow-green-900/20">
             Get in Touch
           </Link>
         </div>

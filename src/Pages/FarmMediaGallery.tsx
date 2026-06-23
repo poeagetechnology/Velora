@@ -34,7 +34,7 @@ const MediaCard: React.FC<MediaCardProps> = ({ asset, onClick }) => {
   return (
     <button
       onClick={onClick}
-      className="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-gray-100 w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+      className="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-gray-100 w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500"
     >
       {!loaded && (
         <div className="absolute inset-0 animate-pulse bg-gradient-to-br from-gray-200 to-gray-300 z-10" />
@@ -262,11 +262,11 @@ export default function FarmMediaGallery({ assets }: FarmMediaGalleryProps) {
         {assets.length > 4 && (
           <button
             onClick={() => open(4)}
-            className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-blue-900 flex items-center justify-center text-white group"
+            className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-green-900 flex items-center justify-center text-white group"
           >
             <div className="text-center">
               <p className="text-2xl font-black">+{assets.length - 4}</p>
-              <p className="text-xs font-semibold text-blue-300 mt-1">
+              <p className="text-xs font-semibold text-green-300 mt-1">
                 more photos
               </p>
             </div>

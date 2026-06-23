@@ -10,7 +10,7 @@ const values = [
   {
     icon: (
       <svg
-        className="w-6 h-6 text-blue-700"
+        className="w-6 h-6 text-green-700"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -29,7 +29,7 @@ const values = [
   {
     icon: (
       <svg
-        className="w-6 h-6 text-blue-700"
+        className="w-6 h-6 text-green-700"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -48,7 +48,7 @@ const values = [
   {
     icon: (
       <svg
-        className="w-6 h-6 text-blue-700"
+        className="w-6 h-6 text-green-700"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -67,7 +67,7 @@ const values = [
   {
     icon: (
       <svg
-        className="w-6 h-6 text-blue-700"
+        className="w-6 h-6 text-green-700"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -143,15 +143,15 @@ const farmAssets = [
 export default function About() {
   return (
     <main className="bg-white min-h-screen">
-      <div className="bg-gradient-to-br from-blue-900 to-blue-800 text-white">
+      <div className="bg-gradient-to-br from-green-900 to-green-800 text-white">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-20">
-          <span className="text-xs font-bold tracking-widest uppercase text-blue-300">
+          <span className="text-xs font-bold tracking-widest uppercase text-green-300">
             Our Story
           </span>
           <h1 className="mt-2 text-4xl md:text-5xl font-bold tracking-tight max-w-2xl">
             Our Own Farm. Our Own Cows. Our Promise.
           </h1>
-          <p className="mt-4 text-blue-200 text-lg max-w-2xl leading-relaxed">
+          <p className="mt-4 text-green-200 text-lg max-w-2xl leading-relaxed">
             Born in Kallipatti, Gobichettipalayam — Velora Milk is our mission
             to bring honest, own-farm dairy to every home. No middlemen. Just
             pure milk from our cows to you.
@@ -163,7 +163,7 @@ export default function About() {
         {/* Story */}
         <section className="py-16 md:py-20">
           <div className="mb-12">
-            <span className="text-xs font-bold tracking-widest uppercase text-blue-700">
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700">
               Our Farm Story
             </span>
             <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -189,8 +189,8 @@ export default function About() {
                   can see, smell, taste, and trace back to its exact source.
                 </p>
               </div>
-              <div className="bg-gradient-to-br from-slate-900 to-blue-950 rounded-2xl p-6 text-white">
-                <p className="text-xs font-bold tracking-widest uppercase text-blue-400 mb-6">
+              <div className="bg-gradient-to-br from-slate-900 to-green-950 rounded-2xl p-6 text-white">
+                <p className="text-xs font-bold tracking-widest uppercase text-green-400 mb-6">
                   Kallipatti Farm Vitals
                 </p>
                 <div className="space-y-4">
@@ -204,7 +204,7 @@ export default function About() {
                       key={item.label}
                       className="pb-4 border-b border-white/10 last:border-b-0"
                     >
-                      <p className="text-blue-300 text-xs font-medium">
+                      <p className="text-green-300 text-xs font-medium">
                         {item.label}
                       </p>
                       <p className="text-2xl font-bold text-white mt-2">
@@ -213,7 +213,7 @@ export default function About() {
                     </div>
                   ))}
                 </div>
-                <p className="mt-6 pt-4 border-t border-white/10 text-xs text-blue-400 leading-relaxed">
+                <p className="mt-6 pt-4 border-t border-white/10 text-xs text-green-400 leading-relaxed">
                   Gobichettipalayam, Tamil Nadu, India
                 </p>
               </div>
@@ -232,7 +232,7 @@ export default function About() {
         {/* Values */}
         <section className="py-16 border-t border-gray-100">
           <div className="text-center mb-12">
-            <span className="text-xs font-bold tracking-widest uppercase text-blue-700">
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700">
               What Guides Us
             </span>
             <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
@@ -243,9 +243,9 @@ export default function About() {
             {values.map((v) => (
               <div
                 key={v.title}
-                className="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-blue-200 hover:shadow-md transition-all"
+                className="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-green-200 hover:shadow-md transition-all"
               >
-                <div className="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+                <div className="w-11 h-11 bg-green-50 rounded-xl flex items-center justify-center mb-4">
                   {v.icon}
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">{v.title}</h3>
@@ -260,7 +260,7 @@ export default function About() {
         {/* Timeline */}
         <section className="py-16 border-t border-gray-100">
           <div className="text-center mb-12">
-            <span className="text-xs font-bold tracking-widest uppercase text-blue-700">
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700">
               Milestones
             </span>
             <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
@@ -270,7 +270,7 @@ export default function About() {
           <div className="max-w-2xl mx-auto space-y-6">
             {milestones.map((m, i) => (
               <div key={i} className="flex gap-5 items-start">
-                <div className="flex-shrink-0 w-16 h-16 bg-blue-900 text-white rounded-xl flex items-center justify-center text-sm font-bold">
+                <div className="flex-shrink-0 w-16 h-16 bg-green-900 text-white rounded-xl flex items-center justify-center text-sm font-bold">
                   {m.year}
                 </div>
                 <div className="flex-1 pt-4 border-t border-gray-100">
@@ -283,17 +283,17 @@ export default function About() {
 
         {/* Mission */}
         <section className="py-16 mb-4">
-          <div className="bg-blue-900 rounded-3xl p-10 md:p-16 text-center text-white">
+          <div className="bg-green-900 rounded-3xl p-10 md:p-16 text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 max-w-2xl mx-auto">
               "Pure dairy, honest process, and community first."
             </h2>
-            <p className="text-blue-200 text-lg max-w-xl mx-auto mb-8">
+            <p className="text-green-200 text-lg max-w-xl mx-auto mb-8">
               That's the promise we make to every farm we work with and every
               family we serve.
             </p>
             <Link
               to="/contact"
-              className="inline-block px-8 py-3.5 bg-white text-blue-900 text-sm font-bold rounded-xl hover:bg-blue-50 transition-all"
+              className="inline-block px-8 py-3.5 bg-white text-green-900 text-sm font-bold rounded-xl hover:bg-green-50 transition-all"
             >
               Connect With Us
             </Link>
