@@ -123,7 +123,7 @@ export default function Herosection() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400 font-medium">
+                  <p className="text-xs text-gray-600 font-semibold">
                     Milked Today
                   </p>
                   <p className="text-sm font-bold text-gray-900">4:30 AM</p>
@@ -148,7 +148,7 @@ export default function Herosection() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400 font-medium">
+                  <p className="text-xs text-gray-600 font-semibold">
                     Delivery Window
                   </p>
                   <p className="text-sm font-bold text-gray-900">5–7 AM</p>

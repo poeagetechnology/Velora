@@ -150,6 +150,11 @@ const whyFeatures = [
     title: "Local Community",
     desc: "We are from Gobichettipalayam. Every purchase supports local families and our farming community.",
   },
+  {
+    icon: P.heart,
+    title: "One Cow, One Family",
+    desc: "Pure, unblended milk sourced from a single dedicated cow for your household's absolute health and purity.",
+  },
 ];
 
 const transparencyItems = [
@@ -330,7 +335,7 @@ export default function Home() {
                 className="py-6 md:py-0 md:px-8 text-center first:pt-0 last:pb-0 md:first:pl-0 md:last:pr-0"
               >
                 <p className="text-3xl font-bold tracking-tight">{s.value}</p>
-                <p className="text-green-300 text-sm mt-1.5 font-medium">
+                <p className="text-green-100 text-sm mt-1.5 font-semibold">
                   {s.label}
                 </p>
               </div>
@@ -391,7 +396,7 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <p className="text-xs text-green-400 mt-6 pt-4 border-t border-white/10 leading-relaxed">
+              <p className="text-xs text-green-200 mt-6 pt-4 border-t border-white/10 leading-relaxed">
                 Kallipatti Farm, Gobichettipalayam, Tamil Nadu · Est. 2025
               </p>
             </div>
@@ -399,6 +404,113 @@ export default function Home() {
 
           <div>
             <FarmMediaGallery assets={farmAssets} />
+          </div>
+        </div>
+      </section>
+
+      {/* Farm Location */}
+      <section className="bg-white py-16 md:py-20 border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="mb-10">
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700">
+              Visit Us
+            </span>
+            <h2 className="mt-2 text-2xl md:text-3xl font-bold text-gray-900">
+              Our Farm Location
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            {/* Address card */}
+            <div className="bg-green-50 border border-green-100 rounded-2xl p-8">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="flex-shrink-0 w-12 h-12 bg-green-900 rounded-xl flex items-center justify-center">
+                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-green-700 uppercase tracking-widest mb-1">Farm Address</p>
+                  <h3 className="text-lg font-bold text-gray-900 leading-snug">
+                    Sampath Thottam
+                  </h3>
+                </div>
+              </div>
+
+              <div className="space-y-3 pl-16">
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-green-600 mt-2 flex-shrink-0" />
+                  <p className="text-gray-700 text-sm font-medium">Sathy Main Road, Kallipatti</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-green-600 mt-2 flex-shrink-0" />
+                  <p className="text-gray-700 text-sm font-medium">Gobichettipalayam, Tamil Nadu</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-green-600 mt-2 flex-shrink-0" />
+                  <p className="text-gray-700 text-sm font-medium">
+                    Pin Code:{" "}
+                    <span className="font-bold text-green-800 bg-green-100 px-2 py-0.5 rounded-md">638505</span>
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-green-200 flex flex-col sm:flex-row gap-3">
+                <a
+                  href="https://goo.gl/maps/Kb5ZPcFMjbbSmUrx9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center gap-2.5 px-5 py-3 bg-green-900 text-white text-sm font-bold rounded-xl hover:bg-green-800 transition-all shadow-lg shadow-green-900/20"
+                >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                  </svg>
+                  Open in Google Maps
+                </a>
+                <a
+                  href="https://goo.gl/maps/Kb5ZPcFMjbbSmUrx9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 border border-green-200 text-green-800 text-sm font-semibold rounded-xl hover:bg-green-50 transition-all"
+                >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                  </svg>
+                  Share Location
+                </a>
+              </div>
+            </div>
+
+            {/* Map embed placeholder + info */}
+            <div className="space-y-4">
+              {/* Google Maps iframe embed */}
+              <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm aspect-video bg-gray-100 flex items-center justify-center">
+                <iframe
+                  title="Velora Milk Farm Location"
+                  src="https://maps.google.com/maps?q=Sampath+Thottam,+Sathy+Main+Road,+Kallipatti,+Gobichettipalayam,+Tamil+Nadu+638505&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, minHeight: "260px" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+              {/* Quick-info chips */}
+              <div className="flex flex-wrap gap-3">
+                {[
+                  { icon: P.clock, text: "Open for farm visits — by appointment" },
+                  { icon: P.truck, text: "Delivery radius from this location" },
+                  { icon: P.mapPin, text: "638505 — Gobichettipalayam" },
+                ].map((chip) => (
+                  <span key={chip.text} className="inline-flex items-center gap-2 px-3.5 py-2 bg-gray-50 border border-gray-200 rounded-xl text-xs text-gray-600 font-medium">
+                    <Icon d={chip.icon} size="w-3.5 h-3.5" color="text-green-700" />
+                    {chip.text}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -456,7 +568,7 @@ export default function Home() {
                 <h2 className="text-3xl md:text-4xl font-bold mb-5 leading-tight">
                   Premium Plan — Pure Cow Milk in Glass
                 </h2>
-                <p className="text-slate-300 text-[15px] leading-relaxed mb-8">
+                <p className="text-white/90 text-[15px] leading-relaxed mb-8">
                   Our highest tier. Single-source pure cow milk collected exclusively
                   from our Kallipatti farm herd, bottled in reusable glass bottles
                   and delivered to your doorstep — within a 3 km radius.
@@ -472,7 +584,7 @@ export default function Home() {
                   ].map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-3 text-slate-300 text-sm"
+                      className="flex items-start gap-3 text-white text-sm"
                     >
                       <div className="mt-0.5 flex-shrink-0">
                         <Icon
@@ -488,7 +600,7 @@ export default function Home() {
                 </ul>
                 <div className="flex items-baseline gap-2 mb-8">
                   <span className="text-4xl font-bold text-white">₹2,499</span>
-                  <span className="text-slate-400 text-base">/month</span>
+                  <span className="text-green-100 text-base">/month</span>
                 </div>
                 <a
                   href="https://wa.me/91XXXXXXXXXX?text=Hello%2C%20I%27m%20interested%20in%20the%20Premium%20subscription%20plan"
@@ -508,7 +620,7 @@ export default function Home() {
               </div>
 
               <div className="p-10 md:p-14 border-l border-white/5 flex flex-col justify-center">
-                <p className="text-xs font-bold tracking-widest uppercase text-green-400 mb-8">
+                <p className="text-xs font-bold tracking-widest uppercase text-green-200 mb-8">
                   What You Receive
                 </p>
                 <div className="grid grid-cols-2 gap-5">
@@ -525,21 +637,63 @@ export default function Home() {
                       <p className="text-3xl font-bold text-white tracking-tight">
                         {item.val}
                       </p>
-                      <p className="text-sm font-semibold text-slate-300 mt-1">
+                      <p className="text-sm font-semibold text-white mt-1">
                         {item.label}
                       </p>
-                      <p className="text-xs text-slate-500 mt-0.5">
+                      <p className="text-xs text-green-200 mt-0.5">
                         {item.sub}
                       </p>
                     </div>
                   ))}
                 </div>
                 <div className="mt-8 p-5 bg-white/5 border border-white/8 rounded-2xl">
-                  <p className="text-sm text-slate-300 leading-relaxed">
+                  <p className="text-sm text-white leading-relaxed">
                     The Premium plan is Velora's most exclusive offering — unadulterated single-source cow milk in glass bottles, with a delivery window of 5:00 AM – 7:00 AM for customers within 3 km of our shop.
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* One Cow One Family — USP Callout */}
+      <section className="py-14 md:py-16 bg-amber-50 border-y border-amber-100">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-16">
+            {/* Icon badge */}
+            <div className="flex-shrink-0 flex items-center justify-center w-20 h-20 rounded-3xl bg-amber-400 shadow-xl shadow-amber-400/30 mx-auto md:mx-0">
+              <svg className="w-10 h-10 text-amber-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
+                <path strokeLinecap="round" strokeLinejoin="round" d={P.heart} />
+              </svg>
+            </div>
+            {/* Copy */}
+            <div className="flex-1 text-center md:text-left">
+              <span className="inline-block px-3 py-1 bg-amber-200 text-amber-900 text-[10px] font-bold rounded-full uppercase tracking-widest mb-3">
+                Our Core Promise
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 leading-snug">
+                One Cow, One Family
+              </h2>
+              <p className="text-gray-700 text-[15px] leading-relaxed max-w-2xl">
+                Pure, unblended milk sourced from a single dedicated cow — reserved exclusively for your household's
+                absolute health and purity. No mixing, no pooling, no compromise. This is what farm-fresh truly means.
+              </p>
+            </div>
+            {/* CTA */}
+            <div className="flex-shrink-0 text-center md:text-right">
+              <a
+                href="https://wa.me/91XXXXXXXXXX?text=Hello%2C%20I%20am%20interested%20in%20the%20One%20Cow%20One%20Family%20Premium%20plan"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-amber-400 text-amber-900 text-sm font-bold rounded-xl hover:bg-amber-300 transition-all shadow-lg shadow-amber-400/30"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Enquire Now
+              </a>
+              <p className="mt-2 text-xs text-amber-800 font-medium">Available in the Premium plan</p>
             </div>
           </div>
         </div>
@@ -602,7 +756,7 @@ export default function Home() {
               <div key={step.num} className="relative">
                 <div className="flex md:justify-center mb-5">
                   <div className="w-[4.75rem] h-[4.75rem] bg-green-900 text-white rounded-full flex flex-col items-center justify-center relative z-10 shadow-lg shadow-green-900/20">
-                    <span className="text-xs text-green-400 font-bold tracking-widest">
+                    <span className="text-xs text-white font-bold tracking-widest">
                       {step.num}
                     </span>
                   </div>
@@ -857,7 +1011,7 @@ export default function Home() {
                 </p>
                 <div className="border-t border-white/10 pt-5">
                   <p className="font-bold text-white text-sm">{t.name}</p>
-                  <p className="text-xs text-green-400 mt-0.5">{t.location}</p>
+                  <p className="text-xs text-green-100 mt-0.5">{t.location}</p>
                 </div>
               </div>
             ))}
