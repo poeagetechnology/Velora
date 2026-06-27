@@ -87,24 +87,54 @@ const values = [
 
 const milestones = [
   {
-    year: "2025",
+    year: "1960",
+    label: "The Beginning",
     event:
-      "Velora Milk founded in Kallipatti, Gobichettipalayam with a mission to deliver 100% own-farm dairy.",
+      "Our grandfather started our dairy journey with just two cows, supporting our family through farming, transportation, and fresh milk production. This laid the foundation for the values we still follow today.",
+    status: "past",
+  },
+  {
+    year: "1980",
+    label: "Growing with the Community",
+    event:
+      "Our herd expanded to 15 cows, and we began supplying fresh milk to the local Aavin Milk Collection Centre, earning the trust of the community through consistent quality.",
+    status: "past",
+  },
+  {
+    year: "2020",
+    label: "Modernizing Our Farm",
+    event:
+      "The next generation took responsibility for the farm, introducing modern dairy equipment, improved cattle care, better feeding practices, and hygienic milk handling to prepare for the future.",
+    status: "past",
   },
   {
     year: "2025",
+    label: "Velora Milk is Born",
     event:
-      "Own farm operations established — our own cows, our own fodder, zero external suppliers.",
+      "We launched Velora Milk, bringing farm-fresh milk directly to families in Kallipatti with complete transparency, freshness, and our own dairy management.",
+    status: "past",
   },
   {
-    year: "2025",
+    year: "June 2026",
+    label: "Expanding to Gobichettipalayam",
     event:
-      "Full product range launched: fresh milk, curd, ghee, paneer, and butter from our farm.",
+      "Opened our first Velora retail store, introduced monthly subscription plans, launched doorstep delivery, and introduced the One Cow Program for premium customers.",
+    status: "current",
+  },
+];
+
+const visionMilestones = [
+  {
+    year: "Sep 2026",
+    label: "Expanding to Erode",
+    event:
+      "Expansion into Erode, introducing a wider range of farm-fresh products including vegetables, fruits, curd, paneer, ghee, and butter through a direct farm-to-customer model.",
   },
   {
-    year: "2025",
+    year: "The Future",
+    label: "Velora Across Tamil Nadu",
     event:
-      "One Cow Program introduced — dedicated cows for individual families across Gobichettipalayam.",
+      "Expand Velora across Tamil Nadu through a carefully selected franchise network, ensuring every city receives the same farm-fresh quality, transparency, and customer experience.",
   },
 ];
 
@@ -156,6 +186,26 @@ export default function About() {
             to bring honest, own-farm dairy to every home. No middlemen. Just
             pure milk from our cows to you.
           </p>
+
+          {/* Hook lines */}
+          <div className="mt-8 flex flex-col sm:flex-row gap-3">
+            <div className="inline-flex items-center gap-3 px-5 py-3 bg-white/10 border border-white/20 rounded-xl backdrop-blur-sm">
+              <span className="flex-shrink-0 w-7 h-7 bg-green-700 rounded-lg flex items-center justify-center text-[10px] font-black text-white">
+                '60
+              </span>
+              <p className="text-sm text-white font-medium">
+                <span className="font-bold text-green-200">1960</span> — Our family's dairy journey began.
+              </p>
+            </div>
+            <div className="inline-flex items-center gap-3 px-5 py-3 bg-white/10 border border-white/20 rounded-xl backdrop-blur-sm">
+              <span className="flex-shrink-0 w-7 h-7 bg-amber-400 rounded-lg flex items-center justify-center text-[10px] font-black text-amber-900">
+                '25
+              </span>
+              <p className="text-sm text-white font-medium">
+                <span className="font-bold text-amber-300">2025</span> — The Velora Milk brand was launched.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -190,7 +240,7 @@ export default function About() {
                 </p>
               </div>
               <div className="bg-gradient-to-br from-slate-900 to-green-950 rounded-2xl p-6 text-white">
-                <p className="text-xs font-bold tracking-widest uppercase text-green-400 mb-6">
+                <p className="text-xs font-bold tracking-widest uppercase text-green-200 mb-6">
                   Kallipatti Farm Vitals
                 </p>
                 <div className="space-y-4">
@@ -198,13 +248,13 @@ export default function About() {
                     { value: "100%", label: "Own farm production" },
                     { value: "4:30 AM", label: "Daily milking time" },
                     { value: "0", label: "External suppliers" },
-                    { value: "2025", label: "Year established" },
+                    { value: "1960", label: "Farming since" },
                   ].map((item) => (
                     <div
                       key={item.label}
                       className="pb-4 border-b border-white/10 last:border-b-0"
                     >
-                      <p className="text-green-300 text-xs font-medium">
+                      <p className="text-green-200 text-xs font-semibold">
                         {item.label}
                       </p>
                       <p className="text-2xl font-bold text-white mt-2">
@@ -213,8 +263,8 @@ export default function About() {
                     </div>
                   ))}
                 </div>
-                <p className="mt-6 pt-4 border-t border-white/10 text-xs text-green-400 leading-relaxed">
-                  Gobichettipalayam, Tamil Nadu, India
+                <p className="mt-6 pt-4 border-t border-white/10 text-xs text-green-200 leading-relaxed">
+                  Sampath Thottam, Sathy Main Road, Kallipatti, Gobichettipalayam – 638505
                 </p>
               </div>
             </div>
@@ -257,27 +307,124 @@ export default function About() {
           </div>
         </section>
 
-        {/* Timeline */}
+        {/* Journey Timeline */}
         <section className="py-16 border-t border-gray-100">
-          <div className="text-center mb-12">
+          <div className="mb-12">
             <span className="text-xs font-bold tracking-widest uppercase text-green-700">
-              Milestones
+              Our Story
             </span>
             <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
-              Our Journey So Far
+              Our Journey
             </h2>
+            <p className="mt-3 text-gray-500 text-[15px] max-w-xl leading-relaxed">
+              Six decades of dedication — from two cows in a small farm to Gobichettipalayam's own milk brand.
+            </p>
           </div>
-          <div className="max-w-2xl mx-auto space-y-6">
-            {milestones.map((m, i) => (
-              <div key={i} className="flex gap-5 items-start">
-                <div className="flex-shrink-0 w-16 h-16 bg-green-900 text-white rounded-xl flex items-center justify-center text-sm font-bold">
-                  {m.year}
+
+          <div className="relative max-w-3xl">
+            {/* Vertical connector line */}
+            <div className="absolute left-[2.375rem] top-8 bottom-8 w-px bg-green-100 hidden sm:block" />
+
+            <div className="space-y-0">
+              {milestones.map((m, i) => (
+                <div key={i} className="relative flex gap-6 sm:gap-8 pb-10 last:pb-0">
+                  {/* Year badge */}
+                  <div className="flex-shrink-0 flex flex-col items-center gap-0 z-10">
+                    <div
+                      className={`w-[4.75rem] h-[4.75rem] rounded-2xl flex flex-col items-center justify-center text-center shadow-md ${
+                        m.status === "current"
+                          ? "bg-green-900 text-white shadow-green-900/30"
+                          : "bg-white border-2 border-green-200 text-green-900"
+                      }`}
+                    >
+                      <span className={`text-[10px] font-bold leading-none ${m.status === "current" ? "text-green-300" : "text-green-600"}`}>
+                        {m.year.length > 4 ? m.year.split(" ")[0] : ""}
+                      </span>
+                      <span className="text-sm font-black leading-tight">
+                        {m.year.length > 4 ? m.year.split(" ")[1] : m.year}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div
+                    className={`flex-1 rounded-2xl p-6 border transition-all ${
+                      m.status === "current"
+                        ? "bg-green-900 border-green-800 shadow-xl shadow-green-900/15"
+                        : "bg-white border-gray-100 shadow-sm hover:border-green-100 hover:shadow-md"
+                    }`}
+                  >
+                    {m.status === "current" && (
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-green-700 text-green-100 text-[10px] font-bold rounded-full uppercase tracking-wider mb-3">
+                        <span className="w-1.5 h-1.5 bg-green-300 rounded-full animate-pulse" />
+                        Now
+                      </span>
+                    )}
+                    <h3
+                      className={`font-bold text-base mb-2 ${
+                        m.status === "current" ? "text-white" : "text-gray-900"
+                      }`}
+                    >
+                      {m.label}
+                    </h3>
+                    <p
+                      className={`text-sm leading-relaxed ${
+                        m.status === "current" ? "text-green-100" : "text-gray-500"
+                      }`}
+                    >
+                      {m.event}
+                    </p>
+                  </div>
                 </div>
-                <div className="flex-1 pt-4 border-t border-gray-100">
-                  <p className="text-gray-700 leading-relaxed">{m.event}</p>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Vision Section */}
+        <section className="py-16 border-t border-gray-100">
+          <div className="mb-12">
+            <span className="text-xs font-bold tracking-widest uppercase text-amber-600">
+              What's Next
+            </span>
+            <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
+              Our Vision
+            </h2>
+            <p className="mt-3 text-gray-500 text-[15px] max-w-xl leading-relaxed">
+              Where we're headed — bigger reach, same farm-fresh promise.
+            </p>
+          </div>
+
+          <div className="relative max-w-3xl">
+            {/* Dashed connector line for future */}
+            <div className="absolute left-[2.375rem] top-8 bottom-8 w-px border-l-2 border-dashed border-amber-200 hidden sm:block" />
+
+            <div className="space-y-0">
+              {visionMilestones.map((m, i) => (
+                <div key={i} className="relative flex gap-6 sm:gap-8 pb-10 last:pb-0">
+                  {/* Badge */}
+                  <div className="flex-shrink-0 z-10">
+                    <div className="w-[4.75rem] h-[4.75rem] rounded-2xl bg-amber-50 border-2 border-amber-200 flex flex-col items-center justify-center text-center">
+                      <span className="text-[10px] font-bold text-amber-600 leading-none">
+                        {m.year.includes(" ") ? m.year.split(" ")[0] : ""}
+                      </span>
+                      <span className="text-xs font-black text-amber-800 leading-tight text-center px-1">
+                        {m.year.includes(" ") ? m.year.split(" ").slice(1).join(" ") : m.year}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-1 bg-amber-50 border border-amber-100 rounded-2xl p-6 hover:border-amber-200 hover:shadow-sm transition-all">
+                    <span className="inline-block px-2.5 py-0.5 bg-amber-200 text-amber-900 text-[10px] font-bold rounded-full uppercase tracking-wider mb-3">
+                      Upcoming
+                    </span>
+                    <h3 className="font-bold text-base text-gray-900 mb-2">{m.label}</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">{m.event}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
 
