@@ -110,11 +110,12 @@ export default function Product() {
           {filtered.map((item) => (
             <div key={item.name} className="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col">
 
-              <div className="bg-gradient-to-br from-slate-50 to-green-50 px-8 pt-8 pb-4 flex items-center justify-center h-52">
+              {/* Fixed-ratio image well — prevents crop & overflow for any image shape */}
+              <div className="relative bg-gradient-to-br from-slate-50 to-green-50 aspect-[4/3] w-full overflow-hidden">
                 <img
                   src={item.img}
                   alt={item.name}
-                  className="h-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-md"
+                  className="absolute inset-0 w-full h-full object-contain p-8 group-hover:scale-105 transition-transform duration-300 drop-shadow-md"
                 />
               </div>
 
